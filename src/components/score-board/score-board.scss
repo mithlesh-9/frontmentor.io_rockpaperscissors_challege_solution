@@ -1,0 +1,55 @@
+
+.score-board {
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 20px;
+    padding: 1em;
+    max-width: 500px;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .score {
+        background: #fff;
+        border-radius: 10px;
+        padding: 1em 2em;
+
+
+        .text {
+            color: hsl(229, 64%, 46%);
+            font-weight: 700;
+            font-size: .7em;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .digit {
+            color: hsl(229, 25%, 31%);
+            font-size: 2.8em;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:550px) {
+    .score-board {
+        margin: 30px 25px;
+        max-width: 100%;
+        .score {
+            padding:1em;
+            .text {
+            font-size: .6em;
+        }
+        .digit {
+            font-size: 2em;
+        }
+        }
+        .logo {
+            max-height:60px;
+        }
+    }
+    
+}

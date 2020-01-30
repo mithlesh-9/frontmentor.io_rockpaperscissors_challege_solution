@@ -1,0 +1,100 @@
+.outer-circle {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:1em;
+
+
+    .inner-circle {
+        background: rgb(220, 220, 221);
+        border-radius: 50%;
+       box-shadow:inset 0px 7px #c0bfbf;
+        width: 130px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.paper {
+    background: hsl(230, 89%, 65%);
+    box-shadow: 0px 7px hsla(230, 89%, 62%, 0.7);
+}
+
+.rock {
+    background: hsl(349, 70%, 56%);
+    box-shadow: 0px 7px hsla(349, 71%, 52%, 0.7); 
+}
+
+.scissors {
+    background: hsl(40, 84%, 53%);;
+    box-shadow: 0px 7px hsla(39, 89%, 49%, 0.7);
+}
+
+.winner::after {
+    display: inline;
+    content: '';
+    background: rgba(255,255,255, 0.04);
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    animation: impulse 1s infinite;
+
+}
+.winner::before {
+    display: inline;
+    content: '';
+    background: rgba(255,255,255, 0.04);
+    width:325px;
+    height: 325px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2;
+    animation: impulse 1s infinite ;
+}
+
+@keyframes impulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+ 
+    100% {
+        transform: scale(1)
+    }
+    
+}
+
+@media only screen and (max-width: 550px ) {
+    .outer-circle {
+    width: 130px;
+    height: 130px;
+    margin: 5%;
+
+
+    .inner-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+
+}
+.winner::after {
+    width:160px;
+    height: 160px;
+}
+.winner::before {
+    width:200px;
+    height: 200px;
+}
+}

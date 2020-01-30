@@ -1,0 +1,9 @@
+const scoreActionTypes = {
+     INCREMENT:'INCREMENT',
+     DECREMENT:'DECREMENT',
+     INCREMENT_SUCCESS:'INCREMENT_SUCCESS',
+     DECREMENT_SUCCESS:'DECREMENT_SUCCESS',
+     GET_SCORE:'GET_SCORE'
+}
+
+export default scoreActionTypes;
